@@ -9,7 +9,6 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 if ( ! function_exists( 'wp_get_current_user' ) ) {
 	require_once( ABSPATH . 'wp-includes/pluggable.php' );
 }
-
 if ( ! function_exists( 'is_plugin_installed' ) ) {
 	function is_plugin_installed( $plugin ): bool {
 		$installed_plugins = get_plugins();
@@ -50,7 +49,6 @@ if ( ! function_exists( 'activator_admin_notice_plugin_install' ) ) {
 		return false;
 	}
 }
-
 if ( ! function_exists( 'activator_admin_notice_plugin_activate' ) ) {
 	function activator_admin_notice_plugin_activate( string $plugin, string $activator_name, string $domain ): bool {
 		if ( ! is_plugin_active( $plugin ) ) {
@@ -82,5 +80,13 @@ if ( ! function_exists( 'activator_admin_notice_plugin_activate' ) ) {
 		}
 
 		return false;
+	}
+}
+if ( ! function_exists( 'activator_json_response' ) ) {
+	function activator_json_response( $data ) {
+		return [
+			'response' => [ 'code' => 200, 'message' => 'OK' ],
+			'body'     => json_encode( $data )
+		];
 	}
 }
