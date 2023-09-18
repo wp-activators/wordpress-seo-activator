@@ -4,9 +4,9 @@
  * Plugin Name:       Yoast SEO Activator
  * Plugin URI:        https://github.com/wp-activators/wordpress-seo-activator
  * Description:       Yoast SEO Plugin Activator
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 3.1.0
- * Requires PHP:      7.1
+ * Requires PHP:      7.2
  * Author:            mohamedhk2
  * Author URI:        https://github.com/mohamedhk2
  **/
